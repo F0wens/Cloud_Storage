@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cloudstorage.LoginController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="626.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cloudstorage.ChangeController">
    <children>
       <AnchorPane prefHeight="400.0" prefWidth="286.0" style="-fx-background-color: #7113ab;">
          <children>
@@ -23,7 +23,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="400.0" prefWidth="399.0" style="-fx-background-color: #bababa;">
+      <AnchorPane prefHeight="400.0" prefWidth="406.0" style="-fx-background-color: #bababa;">
          <children>
             <Label layoutX="32.0" layoutY="132.0" text="Username:" textFill="WHITE">
                <font>
@@ -35,34 +35,36 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="tf_username" layoutX="121.0" layoutY="129.0" promptText="Username" />
-            <PasswordField fx:id="tf_password" layoutX="121.0" layoutY="156.0" promptText="Password" />
-            <Label layoutX="97.0" layoutY="99.0" text="Enter your log in details below:" textFill="WHITE">
+            <TextField fx:id="tf_username3" layoutX="121.0" layoutY="129.0" promptText="Username" />
+            <PasswordField fx:id="tf_password3" layoutX="121.0" layoutY="156.0" promptText="Password" />
+            <Label layoutX="78.0" layoutY="103.0" text="Enter your new log in details below:" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Button fx:id="button_login" layoutX="120.0" layoutY="200.0" mnemonicParsing="false" onAction="#handleLoginButtonAction" prefHeight="30.0" prefWidth="174.0" style="-fx-background-color: #7113ab; -fx-cursor: hand;" text="LOGIN" textFill="WHITE">
+            <Button fx:id="button_change_details" layoutX="120.0" layoutY="246.0" mnemonicParsing="false" onAction="#handleChangeDetails" prefHeight="30.0" prefWidth="174.0" style="-fx-background-color: #7113ab; -fx-cursor: hand;" text="CHANGE DETAILS" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
-            <Label layoutX="97.0" layoutY="363.0" text="Not a user yet?" textFill="WHITE">
+            <Label layoutX="77.0" layoutY="363.0" text="Changed your mind?" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Button fx:id="button_sign_up" layoutX="199.0" layoutY="358.0" mnemonicParsing="false" onAction="#openRegister" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Sign up!" textFill="#7113ab" underline="true">
+            <Button fx:id="button_go_back1" layoutX="214.0" layoutY="358.0" mnemonicParsing="false" onAction="#openLogIn1" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Go back!" textFill="#7113ab" underline="true">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="button_change_page" layoutX="218.0" layoutY="6.0" mnemonicParsing="false" onAction="#openChange" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Change them!" textFill="#7113ab" underline="true">
+            <TextField fx:id="tf_new_username" layoutX="121.0" layoutY="188.0" promptText="New Username" />
+            <PasswordField fx:id="tf_new_password" layoutX="121.0" layoutY="216.0" promptText="New Password" />
+            <Label layoutX="11.0" layoutY="221.0" text="New Password:" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
-            </Button>
-            <Label layoutX="18.0" layoutY="11.0" text="Want to change your details?" textFill="WHITE">
+            </Label>
+            <Label layoutX="8.0" layoutY="194.0" text="New Username:" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>

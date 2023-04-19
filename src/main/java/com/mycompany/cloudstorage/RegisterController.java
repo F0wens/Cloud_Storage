@@ -50,7 +50,7 @@ public class RegisterController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         try {
             Class.forName("org.sqlite.JDBC");
-            conn = DriverManager.getConnection("jdbc:sqlite:/home/ntu-user/NetBeansProjects/CloudStorage/lib/UsersDB.db");
+            conn = DriverManager.getConnection("jdbc:sqlite:/home/ntu-user/NetBeansProjects/CloudStorage/Cloud_Storage/lib/UsersDB.db");
             System.out.println("Database connected!");
         } catch (ClassNotFoundException | SQLException ex) {
             System.out.println("Database connection error: " + ex.getMessage());

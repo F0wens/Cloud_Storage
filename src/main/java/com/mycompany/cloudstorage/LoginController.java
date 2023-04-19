@@ -31,6 +31,9 @@ public class LoginController implements Initializable {
 
     @FXML
     private Button button_sign_up;
+    
+    @FXML
+    private Button button_change_page;
 
     @FXML
     private TextField tf_username;
@@ -48,7 +51,7 @@ public class LoginController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         try {
             Class.forName("org.sqlite.JDBC");
-            conn = DriverManager.getConnection("jdbc:sqlite:/home/ntu-user/NetBeansProjects/CloudStorage/lib/UsersDB.db");
+            conn = DriverManager.getConnection("jdbc:sqlite:/home/ntu-user/NetBeansProjects/CloudStorage/Cloud_Storage/lib/UsersDB.db");
             System.out.println("Database connected!");
         } catch (ClassNotFoundException | SQLException ex) {
             System.out.println("Database connection error: " + ex.getMessage());
@@ -109,6 +112,26 @@ public class LoginController implements Initializable {
         
         // load the new scene
         Parent root = FXMLLoader.load(getClass().getResource("register.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
+        
+        // close the current stage
+        currentStage.close();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+ 
+ @FXML
+ private void openChange() {
+    try {
+        // get a reference to the current stage
+        Stage currentStage = (Stage) button_change_page.getScene().getWindow();
+        
+        // load the new scene
+        Parent root = FXMLLoader.load(getClass().getResource("change.fxml"));
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.setScene(scene);
