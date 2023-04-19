@@ -42,6 +42,7 @@ public class LoginController implements Initializable {
     private Button button_login;
 
     private Connection conn = null;
+    
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -53,11 +54,14 @@ public class LoginController implements Initializable {
             System.out.println("Database connection error: " + ex.getMessage());
         }
     }
+    
 
     @FXML
     public void handleLoginButtonAction(ActionEvent event) {
         String username = tf_username.getText();
         String password = tf_password.getText();
+        System.out.println("handleLoginButtonAction method executed");
+
 
         // Query the database for the user with the given username and password
         String query = "SELECT * FROM users WHERE username = ? AND password = ?";
@@ -65,6 +69,8 @@ public class LoginController implements Initializable {
             pstmt.setString(1, username);
             pstmt.setString(2, password);
             ResultSet rs = pstmt.executeQuery();
+            System.out.println("Username: " + username);
+            System.out.println("Password: " + password);
 
             // If a user with the given username and password exists, open the homepage
             if (rs.next()) {
@@ -74,6 +80,8 @@ public class LoginController implements Initializable {
                     Stage stage = new Stage();
                     stage.setScene(scene);
                     stage.show();
+                    System.out.println("homepage.fxml loaded successfully");
+
 
                     // Hide the login window
                     ((Node) (event.getSource())).getScene().getWindow().hide();
@@ -94,23 +102,23 @@ public class LoginController implements Initializable {
     }
 
     @FXML
-    private void openRegister() {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("register.fxml"));
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+ private void openRegister() {
+    try {
+        // get a reference to the current stage
+        Stage currentStage = (Stage) button_sign_up.getScene().getWindow();
+        
+        // load the new scene
+        Parent root = FXMLLoader.load(getClass().getResource("register.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
+        
+        // close the current stage
+        currentStage.close();
+    } catch (IOException e) {
+        e.printStackTrace();
     }
-
-    @FXML
-    private void handleButtonAction(ActionEvent event) {
-        if (button_sign_up.getId().equals("button_sign_up")) {
-            openRegister();
-        }
-    }
+}
 
 }

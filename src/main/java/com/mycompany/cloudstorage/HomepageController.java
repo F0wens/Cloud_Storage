@@ -24,27 +24,28 @@ public class HomepageController implements Initializable {
     private Button button_log_out;
     
     @FXML
-    private void openLogin() {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+private void openLogOut() {
+    try {
+        // get a reference to the current stage
+        Stage currentStage = (Stage) button_log_out.getScene().getWindow();
+        
+        // load the new scene
+        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
+        
+        // close the current stage
+        currentStage.close();
+    } catch (IOException e) {
+        e.printStackTrace();
     }
- 
-    @FXML
-    private void openLogOut(ActionEvent event) {
-        if (button_log_out.getId().equals("button_log_out")) {
-            openLogin();
-        }
-    }
+}
+
     
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    } 
 }

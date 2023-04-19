@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.cloudstorage.LoginController">
    <children>
       <AnchorPane prefHeight="400.0" prefWidth="286.0" style="-fx-background-color: #7113ab;">
          <children>
@@ -52,7 +52,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Button fx:id="button_sign_up" layoutX="199.0" layoutY="358.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Sign up!" textFill="#7113ab" underline="true">
+            <Button fx:id="button_sign_up" layoutX="199.0" layoutY="358.0" mnemonicParsing="false" onAction="#openRegister" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Sign up!" textFill="#7113ab" underline="true">
                <font>
                   <Font size="14.0" />
                </font>
