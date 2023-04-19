@@ -11,11 +11,42 @@
    <children>
       <AnchorPane prefHeight="400.0" prefWidth="601.0" style="-fx-background-color: #bababa;">
          <children>
-            <Button fx:id="button_log_out" layoutX="496.0" layoutY="8.0" mnemonicParsing="false" onAction="#openLogOut" style="-fx-background-color: #7113ab;" text="LOG OUT" textFill="WHITE">
+            <Button fx:id="button_log_out" layoutX="496.0" layoutY="8.0" mnemonicParsing="false" onAction="#openLogOut" style="-fx-background-color: #7113ab; -fx-cursor: hand;" text="LOG OUT" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
+            <Button fx:id="button_create_file" layoutX="7.0" layoutY="63.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="149.0" style="-fx-background-color: #7113ab; -fx-cursor: hand;" text="CREATE FILE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="button_delete_file" layoutX="7.0" layoutY="100.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="149.0" style="-fx-background-color: #7113ab; -fx-cursor: hand;" text="DELETE FILE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="button_rename" layoutX="7.0" layoutY="138.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="149.0" style="-fx-background-color: #7113ab; -fx-cursor: hand;" text="RENAME FILE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="button_move" layoutX="7.0" layoutY="177.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="149.0" style="-fx-background-color: #7113ab; -fx-cursor: hand;" text="MOVE FILE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="button_copy" layoutX="7.0" layoutY="216.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="149.0" style="-fx-background-color: #7113ab; -fx-cursor: hand;" text="COPY FILE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="button_terminal" layoutX="7.0" layoutY="254.0" mnemonicParsing="false" onAction="#handleTerminalButton" prefHeight="28.0" prefWidth="149.0" style="-fx-background-color: #7113ab; -fx-cursor: hand;" text="OPEN TERMINAL" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <TextArea fx:id="ta_terminal" layoutX="194.0" layoutY="66.0" prefHeight="229.0" prefWidth="386.0" />
          </children>
       </AnchorPane>
    </children>
