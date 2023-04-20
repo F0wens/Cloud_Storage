@@ -1,5 +1,5 @@
-com/mycompany/cloudstorage/LoginController.class
 com/mycompany/cloudstorage/HomepageController.class
+com/mycompany/cloudstorage/App.class
+com/mycompany/cloudstorage/LoginController.class
 module-info.class
 com/mycompany/cloudstorage/RegisterController.class
-com/mycompany/cloudstorage/App.class
