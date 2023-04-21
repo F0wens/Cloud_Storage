@@ -46,7 +46,9 @@ public class LoginController implements Initializable {
 
     private Connection conn = null;
     
-
+    
+    
+// Creates a connection to the desired database. Change the file path as needed for the application to access the database.
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         try {
@@ -65,8 +67,7 @@ public class LoginController implements Initializable {
         String username = tf_username.getText();
         String password = tf_password.getText();
         System.out.println("handleLoginButtonAction method executed");
-
-
+            
         // Query the database for the user with the given username and password
         String query = "SELECT * FROM users WHERE username = ? AND password = ?";
         try (PreparedStatement pstmt = conn.prepareStatement(query)) {
@@ -75,6 +76,7 @@ public class LoginController implements Initializable {
             ResultSet rs = pstmt.executeQuery();
             System.out.println("Username: " + username);
             System.out.println("Password: " + password);
+            
 
             // If a user with the given username and password exists, open the homepage
             if (rs.next()) {
@@ -85,8 +87,7 @@ public class LoginController implements Initializable {
                     stage.setScene(scene);
                     stage.show();
                     System.out.println("homepage.fxml loaded successfully");
-
-
+                                     
                     // Hide the login window
                     ((Node) (event.getSource())).getScene().getWindow().hide();
                 } catch (IOException e) {
@@ -103,7 +104,10 @@ public class LoginController implements Initializable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }
+        }
+    
+ 
+    
 
     @FXML
  private void openRegister() {
