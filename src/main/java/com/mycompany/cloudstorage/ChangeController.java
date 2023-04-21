@@ -28,26 +28,53 @@ import javafx.stage.Stage;
  *
  * @author ntu-user
  */
+/**
+ * ChangeController class that handles the user interface for changing login details.
+ */
 public class ChangeController implements Initializable {
-    
+
+    /**
+     * Button for returning to the previous screen.
+     */
     @FXML
     private Button button_go_back1;
     
+    /**
+     * Text field for entering the current username.
+     */
     @FXML
-private TextField tf_username3;
+    private TextField tf_username3;
 
-@FXML
-private PasswordField tf_password3;
+    /**
+     * Password field for entering the current password.
+     */
+    @FXML
+    private PasswordField tf_password3;
 
-@FXML
-private TextField tf_new_username;
+    /**
+     * Text field for entering the new username.
+     */
+    @FXML
+    private TextField tf_new_username;
 
-@FXML
-private PasswordField tf_new_password;
+    /**
+     * Password field for entering the new password.
+     */
+    @FXML
+    private PasswordField tf_new_password;
 
-private Connection conn = null;
+    /**
+     * Connection object for connecting to the SQLite database.
+     */
+    private Connection conn = null;
 
-@Override
+    /**
+     * Initializes the controller by establishing a connection to the database.
+     * 
+     * @param url The location used to resolve relative paths for the root object, or null if the location is not known.
+     * @param rb The resources used to localize the root object, or null if the root object was not localized.
+     */
+    @Override
     public void initialize(URL url, ResourceBundle rb) {
         try {
             Class.forName("org.sqlite.JDBC");
@@ -58,69 +85,85 @@ private Connection conn = null;
         }
     }
 
-@FXML
-private void handleChangeDetails(ActionEvent event) {
-    System.out.println("Handling change details...");
-    String username = tf_username3.getText();
-    String password = tf_password3.getText();
-    String newUsername = tf_new_username.getText();
-    String newPassword = tf_new_password.getText();
+    /**
+     * Handles changing the user's login details by verifying the current login details and updating the database with the new login details.
+     * 
+     * @param event The action event that triggered the method.
+     */
+    @FXML
+    private void handleChangeDetails(ActionEvent event) {
+        System.out.println("Handling change details...");
+        String username = tf_username3.getText();
+        String password = tf_password3.getText();
+        String newUsername = tf_new_username.getText();
+        String newPassword = tf_new_password.getText();
 
-    // Verify the user's current login details
-    try {
-        String query = "SELECT * FROM users WHERE username = ? AND password = ?";
-        PreparedStatement pstmt = conn.prepareStatement(query);
-        pstmt.setString(1, username);
-        pstmt.setString(2, password);
-        ResultSet rs = pstmt.executeQuery();
-        if (!rs.next()) {
-            System.out.println("Incorrect login details.");
+        /*
+        * Verify the user's current login details
+        */ 
+        try {
+            String query = "SELECT * FROM users WHERE username = ? AND password = ?";
+            PreparedStatement pstmt = conn.prepareStatement(query);
+            pstmt.setString(1, username);
+            pstmt.setString(2, password);
+            ResultSet rs = pstmt.executeQuery();
+            if (!rs.next()) {
+                System.out.println("Incorrect login details.");
+                return;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
             return;
         }
-    } catch (SQLException e) {
-        e.printStackTrace();
-        return;
+
+        /*
+        * Update the user's login details
+        */
+        try {
+            String query = "UPDATE users SET username = ?, password = ? WHERE username = ? AND password = ?";
+            PreparedStatement pstmt = conn.prepareStatement(query);
+            pstmt.setString(1, newUsername);
+            pstmt.setString(2, newPassword);
+            pstmt.setString(3, username);
+            pstmt.setString(4, password);
+            pstmt.executeUpdate();
+            System.out.println("Login details updated.");
+        } catch (SQLException e) {
+            System.out.println("Error executing SQL query: " + e.getMessage());
+            e.printStackTrace();
+            return;
+        }
     }
 
-    // Update the user's login details
-    try {
-        String query = "UPDATE users SET username = ?, password = ? WHERE username = ? AND password = ?";
-        PreparedStatement pstmt = conn.prepareStatement(query);
-        pstmt.setString(1, newUsername);
-        pstmt.setString(2, newPassword);
-        pstmt.setString(3, username);
-        pstmt.setString(4, password);
-        pstmt.executeUpdate();
-        System.out.println("Login details updated.");
-    } catch (SQLException e) {
-        System.out.println("Error executing SQL query: " + e.getMessage());
-        e.printStackTrace();
-        return;
-    }
-}
-
+    /**
+     * Opens the login screen by loading the login.fxml file and creating a new stage.
+     */
     
     
     @FXML
 private void openLogIn1() {
     try {
-        // get a reference to the current stage
+        /*
+        * get a reference to the current stage
+        */
         Stage currentStage = (Stage) button_go_back1.getScene().getWindow();
         
-        // load the new scene
+        /*
+        * load the new scene
+        */
         Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.show();
         
-        // close the current stage
+        /*
+        * close the current stage
+        */
         currentStage.close();
     } catch (IOException e) {
         e.printStackTrace();
     }
 }
-
-    
-    
 }
+

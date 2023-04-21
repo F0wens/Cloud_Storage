@@ -2,6 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
+/**
+ * The LoginController class is a JavaFX controller for the login page of a Cloud Storage application.
+ * It contains methods for handling button actions, initializing database connections, and opening new pages.
+ */
 package com.mycompany.cloudstorage;
 
 import java.io.IOException;
@@ -46,13 +50,19 @@ public class LoginController implements Initializable {
 
     private Connection conn = null;
     
-    
-    
-// Creates a connection to the desired database. Change the file path as needed for the application to access the database.
+    /**
+     * Initializes the controller class.
+     * Creates a connection to the SQLite database.
+     * @param url The URL of the FXML file.
+     * @param rb The ResourceBundle for the FXML file.
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         try {
             Class.forName("org.sqlite.JDBC");
+            /*
+            * Change the file path as needed for the application to access the database.
+            */
             conn = DriverManager.getConnection("jdbc:sqlite:/home/ntu-user/NetBeansProjects/CloudStorage/Cloud_Storage/lib/UsersDB.db");
             System.out.println("Database connected!");
         } catch (ClassNotFoundException | SQLException ex) {
@@ -60,15 +70,22 @@ public class LoginController implements Initializable {
         }
     }
     
-    
-
+    /**
+     * Handles the login button action.
+     * Queries the database to check if the username and password are correct.
+     * If they are correct, opens the homepage of the application.
+     * If they are incorrect, shows an error message.
+     * @param event The ActionEvent that triggered this method.
+     */
     @FXML
     public void handleLoginButtonAction(ActionEvent event) {
         String username = tf_username.getText();
         String password = tf_password.getText();
         System.out.println("handleLoginButtonAction method executed");
             
-        // Query the database for the user with the given username and password
+        /*
+        * Query the database for the user with the given username and password
+        */
         String query = "SELECT * FROM users WHERE username = ? AND password = ?";
         try (PreparedStatement pstmt = conn.prepareStatement(query)) {
             pstmt.setString(1, username);
@@ -78,7 +95,9 @@ public class LoginController implements Initializable {
             System.out.println("Password: " + password);
             
 
-            // If a user with the given username and password exists, open the homepage
+            /*
+            * If a user with the given username and password exists, open the homepage
+            */
             if (rs.next()) {
                 try {
                     Parent root = FXMLLoader.load(getClass().getResource("homepage.fxml"));
@@ -88,13 +107,17 @@ public class LoginController implements Initializable {
                     stage.show();
                     System.out.println("homepage.fxml loaded successfully");
                                      
-                    // Hide the login window
+                    /*
+                    * Hide the login window
+                    */
                     ((Node) (event.getSource())).getScene().getWindow().hide();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             } else {
-                // Show an error message if the username or password is incorrect
+                /*
+                * Show an error message if the username or password is incorrect
+                */
                 Alert alert = new Alert(AlertType.ERROR);
                 alert.setTitle("Login Failed");
                 alert.setHeaderText("Invalid username or password");
@@ -112,17 +135,23 @@ public class LoginController implements Initializable {
     @FXML
  private void openRegister() {
     try {
-        // get a reference to the current stage
+        /*
+        * get a reference to the current stage
+        */
         Stage currentStage = (Stage) button_sign_up.getScene().getWindow();
         
-        // load the new scene
+        /*
+        * load the new scene
+        */
         Parent root = FXMLLoader.load(getClass().getResource("register.fxml"));
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.show();
         
-        // close the current stage
+        /*
+        * close the current stage
+        */
         currentStage.close();
     } catch (IOException e) {
         e.printStackTrace();
@@ -132,17 +161,23 @@ public class LoginController implements Initializable {
  @FXML
  private void openChange() {
     try {
-        // get a reference to the current stage
+        /*
+        * get a reference to the current stage
+        */
         Stage currentStage = (Stage) button_change_page.getScene().getWindow();
         
-        // load the new scene
+        /*
+        * load the new scene
+        */
         Parent root = FXMLLoader.load(getClass().getResource("change.fxml"));
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.show();
         
-        // close the current stage
+        /*
+        * close the current stage
+        */
         currentStage.close();
     } catch (IOException e) {
         e.printStackTrace();

@@ -1,19 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
+/**
+ * @file FilesController.java
+ * @brief This is the controller class for the Files tab of the application.
  */
+
 package com.mycompany.cloudstorage;
 
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -26,7 +23,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -41,6 +37,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+/**
+ * @brief Controller class for the Files tab of the application
+ */
 public class FilesController implements Initializable {
     
     @FXML
@@ -78,9 +77,10 @@ public class FilesController implements Initializable {
     
     private Connection conn = null;
     
-    
-    
-    
+    /**
+     * @brief Handles renaming of a file
+     * @param event The event that triggered this method
+     */
     @FXML
     private void changeFileName(ActionEvent event) {
         System.out.println("Handling file rename...");
@@ -125,6 +125,10 @@ public class FilesController implements Initializable {
         
     }
     
+    /**
+     * @brief Handles creation of a new file
+     * @param event The event that triggered this method
+     */
     @FXML
     private void createNewFile(ActionEvent event) {
         try {
@@ -162,6 +166,10 @@ public class FilesController implements Initializable {
         }
     }
     
+    /**
+     * Deletes a file from the database and the file system.
+     * @param event The event that triggered this method.
+     */
     @FXML
 private void deleteFile(ActionEvent event) {
     try {
@@ -264,7 +272,10 @@ private void deleteFile(ActionEvent event) {
     }
         
 
-    
+   /**
+     * @brief this method is used to open the homepage of the application. 
+     * It retrieves a reference to the current stage, loads the homepage.fxml file, creates a new stage with the homepage scene, and shows the new stage. Finally, it closes the current stage.
+     */ 
 @FXML
 private void openHomepage() {
     try {
