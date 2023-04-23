@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="1" name="com.mycompany.cloudstorage.HomepageControllerTest" time="0.021" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="com.mycompany.cloudstorage.HomepageControllerTest" time="0.002" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="19+36"/>
@@ -60,13 +60,5 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="java.vendor.version" value="Zulu19.28+81-CA"/>
   </properties>
-  <testcase classname="com.mycompany.cloudstorage.HomepageControllerTest" name="com.mycompany.cloudstorage.HomepageControllerTest.testInitialize" time="0.021">
-    <failure message="The test case is a prototype." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The test case is a prototype.
-	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
-	at org.junit.jupiter.api.Assertions.fail(Assertions.java:109)
-	at com.mycompany.cloudstorage.HomepageControllerTest.testInitialize(HomepageControllerTest.java:52)
-</failure>
-    <system-out>initialize
-</system-out>
-  </testcase>
+  <testcase classname="com.mycompany.cloudstorage.HomepageControllerTest" name="com.mycompany.cloudstorage.HomepageControllerTest.testInitialize" time="0.002"/>
 </testsuite>

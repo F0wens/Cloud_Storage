@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="2" name="com.mycompany.cloudstorage.LoginControllerTest" time="0.315" errors="0" skipped="0">
+<testsuite tests="2" failures="1" name="com.mycompany.cloudstorage.LoginControllerTest" time="0.407" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="19+36"/>
@@ -60,22 +60,13 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="java.vendor.version" value="Zulu19.28+81-CA"/>
   </properties>
-  <testcase classname="com.mycompany.cloudstorage.LoginControllerTest" name="com.mycompany.cloudstorage.LoginControllerTest.testHandleLoginButtonAction" time="0.016">
+  <testcase classname="com.mycompany.cloudstorage.LoginControllerTest" name="com.mycompany.cloudstorage.LoginControllerTest.testInitialize" time="0.386"/>
+  <testcase classname="com.mycompany.cloudstorage.LoginControllerTest" name="com.mycompany.cloudstorage.LoginControllerTest.testHandleLoginButtonAction" time="0.021">
     <failure message="Cannot invoke &quot;javafx.scene.control.TextField.getText()&quot; because &quot;this.tf_username&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;javafx.scene.control.TextField.getText()&quot; because &quot;this.tf_username&quot; is null
 	at com.mycompany.cloudstorage.LoginController.handleLoginButtonAction(LoginController.java:82)
-	at com.mycompany.cloudstorage.LoginControllerTest.testHandleLoginButtonAction(LoginControllerTest.java:64)
+	at com.mycompany.cloudstorage.LoginControllerTest.testHandleLoginButtonAction(LoginControllerTest.java:62)
 </failure>
     <system-out>handleLoginButtonAction
-</system-out>
-  </testcase>
-  <testcase classname="com.mycompany.cloudstorage.LoginControllerTest" name="com.mycompany.cloudstorage.LoginControllerTest.testInitialize" time="0.299">
-    <failure message="The test case is a prototype." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The test case is a prototype.
-	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
-	at org.junit.jupiter.api.Assertions.fail(Assertions.java:109)
-	at com.mycompany.cloudstorage.LoginControllerTest.testInitialize(LoginControllerTest.java:53)
-</failure>
-    <system-out>initialize
-Database connected!
 </system-out>
   </testcase>
 </testsuite>

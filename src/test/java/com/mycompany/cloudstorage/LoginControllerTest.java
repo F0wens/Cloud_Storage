@@ -49,8 +49,6 @@ public class LoginControllerTest {
         ResourceBundle rb = null;
         LoginController instance = new LoginController();
         instance.initialize(url, rb);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -62,8 +60,6 @@ public class LoginControllerTest {
         ActionEvent event = null;
         LoginController instance = new LoginController();
         instance.handleLoginButtonAction(event);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
     

@@ -48,8 +48,6 @@ public class RegisterControllerTest {
         ResourceBundle rb = null;
         RegisterController instance = new RegisterController();
         instance.initialize(url, rb);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }

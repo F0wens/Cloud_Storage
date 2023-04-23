@@ -48,8 +48,6 @@ public class AppTest {
         Stage stage = null;
         App instance = new App();
         instance.start(stage);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -60,8 +58,6 @@ public class AppTest {
         System.out.println("main");
         String[] args = null;
         App.main(args);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
