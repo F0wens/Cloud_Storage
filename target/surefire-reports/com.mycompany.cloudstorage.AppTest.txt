@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.mycompany.cloudstorage.AppTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.316 sec <<< FAILURE!
-com.mycompany.cloudstorage.AppTest.testStart()  Time elapsed: 0.229 sec  <<< FAILURE!
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.043 sec <<< FAILURE!
+com.mycompany.cloudstorage.AppTest.testStart()  Time elapsed: 0.79 sec  <<< FAILURE!
 java.lang.ExceptionInInitializerError
 	at java.base/jdk.internal.misc.Unsafe.ensureClassInitialized0(Native Method)
 	at java.base/jdk.internal.misc.Unsafe.ensureClassInitialized(Unsafe.java:1160)
@@ -18,7 +18,7 @@ java.lang.ExceptionInInitializerError
 	at javafx.fxml/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2634)
 	at javafx.fxml/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2548)
 	at javafx.fxml/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2516)
-	at com.mycompany.cloudstorage.App.start(App.java:21)
+	at com.mycompany.cloudstorage.App.start(App.java:36)
 	at com.mycompany.cloudstorage.AppTest.testStart(AppTest.java:50)
 Caused by: java.lang.IllegalStateException: Toolkit not initialized
 	at javafx.graphics/com.sun.javafx.application.PlatformImpl.runLater(PlatformImpl.java:437)
@@ -28,7 +28,7 @@ Caused by: java.lang.IllegalStateException: Toolkit not initialized
 	at javafx.controls/javafx.scene.control.Control.<clinit>(Control.java:99)
 	... 30 more
 
-com.mycompany.cloudstorage.AppTest.testMain()  Time elapsed: 0.083 sec  <<< FAILURE!
+com.mycompany.cloudstorage.AppTest.testMain()  Time elapsed: 0.252 sec  <<< FAILURE!
 java.lang.RuntimeException: Exception in Application start method
 	at javafx.graphics/com.sun.javafx.application.LauncherImpl.launchApplication1(LauncherImpl.java:901)
 	at javafx.graphics/com.sun.javafx.application.LauncherImpl.lambda$launchApplication$2(LauncherImpl.java:196)
@@ -48,7 +48,7 @@ Caused by: java.lang.NoClassDefFoundError: Could not initialize class javafx.sce
 	at javafx.fxml/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2634)
 	at javafx.fxml/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2548)
 	at javafx.fxml/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2516)
-	at com.mycompany.cloudstorage.App.start(App.java:21)
+	at com.mycompany.cloudstorage.App.start(App.java:36)
 	at javafx.graphics/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:847)
 	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:484)
 	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:457)
@@ -73,7 +73,7 @@ Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionI
 	at javafx.fxml/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2634)
 	at javafx.fxml/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2548)
 	at javafx.fxml/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2516)
-	at com.mycompany.cloudstorage.App.start(App.java:21)
+	at com.mycompany.cloudstorage.App.start(App.java:36)
 	at com.mycompany.cloudstorage.AppTest.testStart(AppTest.java:50)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
@@ -104,7 +104,7 @@ Caused by: java.lang.NoClassDefFoundError: Could not initialize class javafx.sce
 	at javafx.fxml/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2634)
 	at javafx.fxml/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2548)
 	at javafx.fxml/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2516)
-	at com.mycompany.cloudstorage.App.start(App.java:21)
+	at com.mycompany.cloudstorage.App.start(App.java:36)
 	at javafx.graphics/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:847)
 	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:484)
 	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:457)
@@ -129,7 +129,7 @@ Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionI
 	at javafx.fxml/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2634)
 	at javafx.fxml/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2548)
 	at javafx.fxml/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2516)
-	at com.mycompany.cloudstorage.App.start(App.java:21)
+	at com.mycompany.cloudstorage.App.start(App.java:36)
 	at com.mycompany.cloudstorage.AppTest.testStart(AppTest.java:50)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)

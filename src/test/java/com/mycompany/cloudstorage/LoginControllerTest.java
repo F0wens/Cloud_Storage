@@ -66,4 +66,6 @@ public class LoginControllerTest {
         fail("The test case is a prototype.");
     }
     
+    
+    
 }

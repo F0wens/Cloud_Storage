@@ -133,7 +133,7 @@ public class LoginController implements Initializable {
     
 
     @FXML
- private void openRegister() {
+ private void openRegister(ActionEvent event) {
     try {
         /*
         * get a reference to the current stage

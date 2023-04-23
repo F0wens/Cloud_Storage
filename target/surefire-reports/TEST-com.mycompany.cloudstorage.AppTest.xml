@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="2" name="com.mycompany.cloudstorage.AppTest" time="0.312" errors="0" skipped="0">
+<testsuite tests="2" failures="2" name="com.mycompany.cloudstorage.AppTest" time="1.042" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="19+36"/>
@@ -60,7 +60,7 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="java.vendor.version" value="Zulu19.28+81-CA"/>
   </properties>
-  <testcase classname="com.mycompany.cloudstorage.AppTest" name="com.mycompany.cloudstorage.AppTest.testStart" time="0.229">
+  <testcase classname="com.mycompany.cloudstorage.AppTest" name="com.mycompany.cloudstorage.AppTest.testStart" time="0.79">
     <failure type="java.lang.ExceptionInInitializerError">java.lang.ExceptionInInitializerError
 	at java.base/jdk.internal.misc.Unsafe.ensureClassInitialized0(Native Method)
 	at java.base/jdk.internal.misc.Unsafe.ensureClassInitialized(Unsafe.java:1160)
@@ -76,7 +76,7 @@
 	at javafx.fxml/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2634)
 	at javafx.fxml/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2548)
 	at javafx.fxml/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2516)
-	at com.mycompany.cloudstorage.App.start(App.java:21)
+	at com.mycompany.cloudstorage.App.start(App.java:36)
 	at com.mycompany.cloudstorage.AppTest.testStart(AppTest.java:50)
 Caused by: java.lang.IllegalStateException: Toolkit not initialized
 	at javafx.graphics/com.sun.javafx.application.PlatformImpl.runLater(PlatformImpl.java:437)
@@ -89,7 +89,7 @@ Caused by: java.lang.IllegalStateException: Toolkit not initialized
     <system-out>start
 </system-out>
   </testcase>
-  <testcase classname="com.mycompany.cloudstorage.AppTest" name="com.mycompany.cloudstorage.AppTest.testMain" time="0.083">
+  <testcase classname="com.mycompany.cloudstorage.AppTest" name="com.mycompany.cloudstorage.AppTest.testMain" time="0.252">
     <failure message="Exception in Application start method" type="java.lang.RuntimeException">java.lang.RuntimeException: Exception in Application start method
 	at javafx.graphics/com.sun.javafx.application.LauncherImpl.launchApplication1(LauncherImpl.java:901)
 	at javafx.graphics/com.sun.javafx.application.LauncherImpl.lambda$launchApplication$2(LauncherImpl.java:196)
@@ -109,7 +109,7 @@ Caused by: java.lang.NoClassDefFoundError: Could not initialize class javafx.sce
 	at javafx.fxml/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2634)
 	at javafx.fxml/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2548)
 	at javafx.fxml/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2516)
-	at com.mycompany.cloudstorage.App.start(App.java:21)
+	at com.mycompany.cloudstorage.App.start(App.java:36)
 	at javafx.graphics/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:847)
 	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:484)
 	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:457)
@@ -134,7 +134,7 @@ Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionI
 	at javafx.fxml/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2634)
 	at javafx.fxml/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2548)
 	at javafx.fxml/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2516)
-	at com.mycompany.cloudstorage.App.start(App.java:21)
+	at com.mycompany.cloudstorage.App.start(App.java:36)
 	at com.mycompany.cloudstorage.AppTest.testStart(AppTest.java:50)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
@@ -165,7 +165,7 @@ Caused by: java.lang.NoClassDefFoundError: Could not initialize class javafx.sce
 	at javafx.fxml/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2634)
 	at javafx.fxml/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2548)
 	at javafx.fxml/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2516)
-	at com.mycompany.cloudstorage.App.start(App.java:21)
+	at com.mycompany.cloudstorage.App.start(App.java:36)
 	at javafx.graphics/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:847)
 	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:484)
 	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:457)
@@ -190,7 +190,7 @@ Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionI
 	at javafx.fxml/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2634)
 	at javafx.fxml/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2548)
 	at javafx.fxml/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2516)
-	at com.mycompany.cloudstorage.App.start(App.java:21)
+	at com.mycompany.cloudstorage.App.start(App.java:36)
 	at com.mycompany.cloudstorage.AppTest.testStart(AppTest.java:50)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
