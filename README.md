@@ -1,0 +1,1 @@
+This is a simple cloud storage application that I made as part of a university assignment. It allows the user to access the application through a gui and work with files within the computer as a file management system. 
